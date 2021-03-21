@@ -72,9 +72,9 @@ func (s *Service) RunTest(ctx context.Context, req *conformance.Request) (*confo
 		"traffic-spec":   6,
 	}
 	specVersion := map[string]string{
-		"traffic-access": "v0.6.0/v1alpha3",
-		"traffic-split":  "v0.6.0/v1alpha4",
-		"traffic-spec":   "v0.6.0/v1alpha4",
+		"traffic-access": "v0.6.0/v1alpha2",
+		"traffic-split":  "v0.6.0/v1alpha3",
+		"traffic-spec":   "v0.6.0/v1alpha3",
 	}
 
 	details := make([]*conformance.Detail, 0)

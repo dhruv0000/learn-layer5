@@ -1,19 +1,20 @@
-apiVersion: specs.smi-spec.io/v1alpha4
+apiVersion: specs.smi-spec.io/v1alpha3
 kind: HTTPRouteGroup
 metadata:
   name: http-rg
   namespace: <NAMESPACE>
-matches:
-- name: testMatch
-  pathRegex: /metrics
-  methods: ["*"]
+spec:
+  matches:
+  - name: testMatch
+    pathRegex: /metrics
+    methods: ["*"]
 ---
-apiVersion: access.smi-spec.io/v1alpha3
+apiVersion: access.smi-spec.io/v1alpha2
 kind: TrafficTarget
 metadata:
   name: service-targets
   namespace: <NAMESPACE>
-rules:
+spec:
   destination:
     kind: ServiceAccount
     name: service-b
@@ -23,7 +24,7 @@ rules:
   - kind: ServiceAccount
     name: service-a
     namespace: <NAMESPACE>
-  specs:
+  rules:
   - kind: HTTPRouteGroup
     name: http-rg
     matches:

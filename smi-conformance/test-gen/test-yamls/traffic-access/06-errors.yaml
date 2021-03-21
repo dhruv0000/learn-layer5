@@ -1,5 +1,5 @@
 ---
-apiVersion: specs.smi-spec.io/v1alpha4
+apiVersion: specs.smi-spec.io/v1alpha3
 kind: TCPRoute
 metadata:
   name: service-tcp-route
@@ -8,7 +8,7 @@ spec:
   matches:
     ports: []
 ---
-apiVersion: access.smi-spec.io/v1alpha3
+apiVersion: access.smi-spec.io/v1alpha2
 kind: TrafficTarget
 metadata:
   name: service-targets
